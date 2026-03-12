@@ -1,7 +1,7 @@
 :root {
   --bg-color: #223030;
   --text-color: #dddddd;
-  --bg-image: url("../img/bg.jpg");
+  --bg-image: url("../../assets/img/bg.jpg");
 }
 body {
   padding: 0;
@@ -61,10 +61,37 @@ a {
   text-decoration: none;
   opacity: 0.5;
 }
-.group a:hover {
+.group a:hover,
+.submenu a:hover {
   opacity: 1;
   padding-left: 0.5rem;
 }
 .group p + p {
   margin: 0;
+}
+.dropdown-wrapper {
+  cursor: pointer;
+}
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+  margin: 0;
+  padding-left: 20;
+}
+.dropdown-wrapper:hover .submenu {
+  max-height: 500px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.dropdown-wrapper p {
+  transition: 0.4s;
+  opacity: 0.5;
+  padding: 0.3rem 0;
+  margin: 0;
+}
+.dropdown-wrapper:hover p {
+  opacity: 1;
 }
